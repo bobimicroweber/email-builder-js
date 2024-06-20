@@ -19,6 +19,7 @@ import ImportJson from './ImportJson';
 import JsonPanel from './JsonPanel';
 import MainTabsGroup from './MainTabsGroup';
 import SaveButton from './SaveButton';
+import BackToButton from './BackToButton';
 
 export default function TemplatePanel() {
   const document = useDocument();
@@ -92,10 +93,8 @@ export default function TemplatePanel() {
         <Stack px={2} direction="row" gap={2} width="100%" justifyContent="between" alignItems="center">
 
           <Stack direction="row" gap={2} width="40%" >
-            <Button variant="outlined" href="/" startIcon={<ArrowBack />}>
-              <span>Back to Newsletter</span>
-            </Button>
 
+           <BackToButton />
            <SaveButton />
 
           </Stack>

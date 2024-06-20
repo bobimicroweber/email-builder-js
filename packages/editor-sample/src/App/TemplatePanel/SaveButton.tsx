@@ -12,8 +12,10 @@ export default function SaveButton() {
   const code = useMemo(() => renderToStaticMarkup(document, { rootBlockId: 'root' }), [document]);
   const onClick = async () => {
 
-    alert(code);
-
+    const event = new CustomEvent('saveHtml', {
+      detail: code,
+    });
+    window.dispatchEvent(event);
   };
 
   return (

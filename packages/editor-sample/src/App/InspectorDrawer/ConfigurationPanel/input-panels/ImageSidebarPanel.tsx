@@ -78,7 +78,7 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
                   startIcon={<Refresh />}
                   onClick={() => {
                     const event = new CustomEvent('selectImage', {});
-                    document.dispatchEvent(event);
+                    window.dispatchEvent(event);
                   }}
                 >
                   Change
@@ -107,7 +107,7 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
                 startIcon={<CloudUpload />}
                   onClick={() => {
                     const event = new CustomEvent('selectImage', {});
-                    document.dispatchEvent(event);
+                    window.dispatchEvent(event);
                   }}
               >
               Upload file
