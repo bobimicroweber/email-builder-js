@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
-import { ArrowBack, MonitorOutlined, PhoneIphoneOutlined, Save } from '@mui/icons-material';
+import { ArrowBack, MonitorOutlined, PhoneIphoneOutlined } from '@mui/icons-material';
 import { Box, Button, Stack, SxProps, ToggleButton, ToggleButtonGroup, Tooltip } from '@mui/material';
-import { Reader, renderToStaticMarkup } from '@usewaypoint/email-builder';
+import { Reader } from '@usewaypoint/email-builder';
 
 import EditorBlock from '../../documents/editor/EditorBlock';
 import {
