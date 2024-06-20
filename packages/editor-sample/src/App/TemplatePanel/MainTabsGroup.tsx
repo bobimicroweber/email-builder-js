@@ -38,22 +38,7 @@ export default function MainTabsGroup() {
           </Tooltip>
         }
       />
-      <Tab
-        value="html"
-        label={
-          <Tooltip title="HTML output">
-            <CodeOutlined fontSize="small" />
-          </Tooltip>
-        }
-      />
-      <Tab
-        value="json"
-        label={
-          <Tooltip title="JSON output">
-            <DataObjectOutlined fontSize="small" />
-          </Tooltip>
-        }
-      />
+
     </Tabs>
   );
 }

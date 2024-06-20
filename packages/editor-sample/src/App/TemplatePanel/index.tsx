@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
-import { MonitorOutlined, PhoneIphoneOutlined } from '@mui/icons-material';
-import { Box, Stack, SxProps, ToggleButton, ToggleButtonGroup, Tooltip } from '@mui/material';
-import { Reader } from '@usewaypoint/email-builder';
+import { ArrowBack, MonitorOutlined, PhoneIphoneOutlined, Save } from '@mui/icons-material';
+import { Box, Button, Stack, SxProps, ToggleButton, ToggleButtonGroup, Tooltip } from '@mui/material';
+import { Reader, renderToStaticMarkup } from '@usewaypoint/email-builder';
 
 import EditorBlock from '../../documents/editor/EditorBlock';
 import {
@@ -12,14 +12,13 @@ import {
   useSelectedScreenSize,
 } from '../../documents/editor/EditorContext';
 import ToggleInspectorPanelButton from '../InspectorDrawer/ToggleInspectorPanelButton';
-import ToggleSamplesPanelButton from '../SamplesDrawer/ToggleSamplesPanelButton';
 
 import DownloadJson from './DownloadJson';
 import HtmlPanel from './HtmlPanel';
 import ImportJson from './ImportJson';
 import JsonPanel from './JsonPanel';
 import MainTabsGroup from './MainTabsGroup';
-import ShareButton from './ShareButton';
+import SaveButton from './SaveButton';
 
 export default function TemplatePanel() {
   const document = useDocument();
@@ -89,8 +88,18 @@ export default function TemplatePanel() {
         justifyContent="space-between"
         alignItems="center"
       >
-        <ToggleSamplesPanelButton />
-        <Stack px={2} direction="row" gap={2} width="100%" justifyContent="space-between" alignItems="center">
+
+        <Stack px={2} direction="row" gap={2} width="100%" justifyContent="between" alignItems="center">
+
+          <Stack direction="row" gap={2} width="40%" >
+            <Button variant="outlined" href="/" startIcon={<ArrowBack />}>
+              <span>Back to Newsletter</span>
+            </Button>
+
+           <SaveButton />
+
+          </Stack>
+
           <Stack direction="row" spacing={2}>
             <MainTabsGroup />
           </Stack>
@@ -109,7 +118,7 @@ export default function TemplatePanel() {
                 </Tooltip>
               </ToggleButton>
             </ToggleButtonGroup>
-            <ShareButton />
+
           </Stack>
         </Stack>
         <ToggleInspectorPanelButton />
