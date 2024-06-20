@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
 import {
+  CloudUpload, Delete, Refresh,
   VerticalAlignBottomOutlined,
   VerticalAlignCenterOutlined,
   VerticalAlignTopOutlined,
 } from '@mui/icons-material';
-import { Stack, ToggleButton } from '@mui/material';
+import { Button, Stack, ToggleButton } from '@mui/material';
 import { ImageProps, ImagePropsSchema } from '@usewaypoint/block-image';
 
 import BaseSidebarPanel from './helpers/BaseSidebarPanel';
@@ -33,6 +34,78 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
 
   return (
     <BaseSidebarPanel title="Image block">
+
+
+      {
+        data.props?.url ? <>
+            <div style={{
+              position: 'relative',
+            }}>
+              <div style={{
+                position: 'relative',
+              }}>
+                <img
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'contain',
+                  }}
+                  src={data.props?.url ?? ''} alt={data.props?.alt ?? ''} />
+              </div>
+              <div
+                style={{
+                  width: '100%',
+                  position: 'absolute',
+                  bottom: 10,
+                  right: 0,
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  padding: '8px',
+                }}
+              >
+                <Button
+                  component="label"
+                  role={undefined}
+                  variant="contained"
+                  tabIndex={-1}
+                  startIcon={<Refresh />}
+                  onClick={() => {
+
+                  }}
+                >
+                  Change
+                </Button>
+                <Button
+                  component="label"
+                  role={undefined}
+                  variant="contained"
+                  tabIndex={-1}
+                  startIcon={<Delete />}
+                  onClick={() => {
+                    updateData({ ...data, props: { ...data.props, url: null } });
+                  }}
+                >
+                  Delete
+                </Button>
+            </div>
+          </div>
+        </> :
+        <>
+          <Button
+                  component="label"
+                  role={undefined}
+                variant="contained"
+                tabIndex={-1}
+                startIcon={<CloudUpload />}
+              >
+              Upload file
+            </Button>
+        </>
+      }
+
+
       <TextInput
         label="Source URL"
         defaultValue={data.props?.url ?? ''}
