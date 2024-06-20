@@ -32,6 +32,11 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
     }
   };
 
+  window.addEventListener('selectedImage', (event) => {
+    const url = (event as CustomEvent).detail;
+    updateData({ ...data, props: { ...data.props, url } });
+  });
+
   return (
     <BaseSidebarPanel title="Image block">
 
@@ -72,7 +77,8 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
                   tabIndex={-1}
                   startIcon={<Refresh />}
                   onClick={() => {
-
+                    const event = new CustomEvent('selectImage', {});
+                    document.dispatchEvent(event);
                   }}
                 >
                   Change
@@ -99,21 +105,15 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
                 variant="contained"
                 tabIndex={-1}
                 startIcon={<CloudUpload />}
+                  onClick={() => {
+                    const event = new CustomEvent('selectImage', {});
+                    document.dispatchEvent(event);
+                  }}
               >
               Upload file
             </Button>
         </>
       }
-
-
-      <TextInput
-        label="Source URL"
-        defaultValue={data.props?.url ?? ''}
-        onChange={(v) => {
-          const url = v.trim().length === 0 ? null : v.trim();
-          updateData({ ...data, props: { ...data.props, url } });
-        }}
-      />
 
       <TextInput
         label="Alt text"
