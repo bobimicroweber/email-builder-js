@@ -11,6 +11,7 @@ import {
   NotesOutlined,
   SmartButtonOutlined,
   ViewColumnOutlined,
+  MenuOutlined,
 } from '@mui/icons-material';
 
 import { TEditorBlock } from '../../../../editor/core';
@@ -149,6 +150,17 @@ export const BUTTONS: TButtonProps[] = [
     icon: <LibraryAddOutlined />,
     block: () => ({
       type: 'Container',
+      data: {
+        style: { padding: { top: 16, bottom: 16, left: 24, right: 24 } },
+      },
+    }),
+  },
+
+  {
+    label: 'Menu',
+    icon: <MenuOutlined />,
+    block: () => ({
+      type: 'Menu',
       data: {
         style: { padding: { top: 16, bottom: 16, left: 24, right: 24 } },
       },

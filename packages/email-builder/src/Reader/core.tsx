@@ -9,6 +9,8 @@ import { Html, HtmlPropsSchema } from '@usewaypoint/block-html';
 import { Image, ImagePropsSchema } from '@usewaypoint/block-image';
 import { Spacer, SpacerPropsSchema } from '@usewaypoint/block-spacer';
 import { Text, TextPropsSchema } from '@usewaypoint/block-text';
+import { Menu, MenuPropsSchema } from '../../../block-menu/src/index';
+
 import {
   buildBlockComponent,
   buildBlockConfigurationDictionary,
@@ -73,6 +75,10 @@ const READER_DICTIONARY = buildBlockConfigurationDictionary({
   Text: {
     schema: TextPropsSchema,
     Component: Text,
+  },
+  Menu: {
+    schema: MenuPropsSchema,
+    Component: Menu,
   },
 });
 
