@@ -82,10 +82,14 @@ export default function TemplatePanel() {
 
   });
 
-  const loadedEvent = new CustomEvent('editorLoaded', {
-    detail: {},
-  });
-  window.dispatchEvent(loadedEvent);
+  const [loadedEventFire, setLoadedEventFire] = React.useState(false);
+  if (!loadedEventFire) {
+    const loadedEvent = new CustomEvent('editorLoaded', {
+      detail: {},
+    });
+    window.dispatchEvent(loadedEvent);
+    setLoadedEventFire(true);
+  }
 
   return (
     <>
