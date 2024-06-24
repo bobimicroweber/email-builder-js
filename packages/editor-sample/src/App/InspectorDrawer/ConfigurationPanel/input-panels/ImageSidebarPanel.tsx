@@ -14,6 +14,7 @@ import RadioGroupInput from './helpers/inputs/RadioGroupInput';
 import TextDimensionInput from './helpers/inputs/TextDimensionInput';
 import TextInput from './helpers/inputs/TextInput';
 import MultiStylePropertyPanel from './helpers/style-inputs/MultiStylePropertyPanel';
+import { useSelectedBlockId } from '../../../../documents/editor/EditorContext';
 
 type ImageSidebarPanelProps = {
   data: ImageProps;
@@ -32,9 +33,13 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
     }
   };
 
+  const selectedBlockId = useSelectedBlockId();
+
   window.addEventListener('selectedImage', (event) => {
-    const url = (event as CustomEvent).detail;
-    updateData({ ...data, props: { ...data.props, url } });
+    const eventDetail = (event as CustomEvent).detail;
+    if (eventDetail.blockId == selectedBlockId) {
+        updateData({ ...data, props: { ...data.props, url: eventDetail.url } });
+    }
   });
 
   return (
@@ -77,7 +82,11 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
                   tabIndex={-1}
                   startIcon={<Refresh />}
                   onClick={() => {
-                    const event = new CustomEvent('selectImage', {});
+                    const event = new CustomEvent('selectImage', {
+                      detail: {
+                        blockId: selectedBlockId,
+                      },
+                    });
                     window.dispatchEvent(event);
                   }}
                 >
@@ -106,7 +115,11 @@ export default function ImageSidebarPanel({ data, setData }: ImageSidebarPanelPr
                 tabIndex={-1}
                 startIcon={<CloudUpload />}
                   onClick={() => {
-                    const event = new CustomEvent('selectImage', {});
+                    const event = new CustomEvent('selectImage', {
+                        detail: {
+                            blockId: selectedBlockId,
+                        },
+                    });
                     window.dispatchEvent(event);
                   }}
               >
