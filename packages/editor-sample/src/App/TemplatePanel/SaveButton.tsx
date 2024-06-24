@@ -12,7 +12,7 @@ export default function SaveButton() {
   const code = useMemo(() => renderToStaticMarkup(document, { rootBlockId: 'root' }), [document]);
 
   const json = useMemo(() => {
-    return `data:text/plain,${encodeURIComponent(JSON.stringify(document, null, '  '))}`;
+    return JSON.stringify(document, null, '  ');
   }, [document]);
 
   const onClick = async () => {
