@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { ArrowBack, MonitorOutlined, PhoneIphoneOutlined } from '@mui/icons-material';
 import { Box, Button, Stack, SxProps, ToggleButton, ToggleButtonGroup, Tooltip } from '@mui/material';
@@ -6,6 +6,7 @@ import { Reader } from '@usewaypoint/email-builder';
 
 import EditorBlock from '../../documents/editor/EditorBlock';
 import {
+  resetDocument,
   setSelectedScreenSize,
   useDocument,
   useSelectedMainTab,
@@ -20,6 +21,7 @@ import JsonPanel from './JsonPanel';
 import MainTabsGroup from './MainTabsGroup';
 import SaveButton from './SaveButton';
 import BackToButton from './BackToButton';
+import WELCOME from '../../getConfiguration/sample/welcome';
 
 export default function TemplatePanel() {
   const document = useDocument();
@@ -71,6 +73,11 @@ export default function TemplatePanel() {
         return <JsonPanel />;
     }
   };
+
+  window.addEventListener('loadJsonTemplate', (event) => {
+    const eventDetail = (event as CustomEvent).detail;
+    resetDocument(eventDetail.json);
+  });
 
   return (
     <>
