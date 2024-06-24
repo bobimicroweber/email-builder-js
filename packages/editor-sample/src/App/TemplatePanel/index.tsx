@@ -21,7 +21,6 @@ import JsonPanel from './JsonPanel';
 import MainTabsGroup from './MainTabsGroup';
 import SaveButton from './SaveButton';
 import BackToButton from './BackToButton';
-import WELCOME from '../../getConfiguration/sample/welcome';
 
 export default function TemplatePanel() {
   const document = useDocument();
@@ -80,8 +79,13 @@ export default function TemplatePanel() {
     // Decode base64 string to JSON
     const json = JSON.parse(atob(eventDetail.json));
     resetDocument(json);
-    
+
   });
+
+  const loadedEvent = new CustomEvent('editorLoaded', {
+    detail: {},
+  });
+  window.dispatchEvent(loadedEvent);
 
   return (
     <>
