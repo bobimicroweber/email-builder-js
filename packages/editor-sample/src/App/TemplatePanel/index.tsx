@@ -76,7 +76,11 @@ export default function TemplatePanel() {
 
   window.addEventListener('loadJsonTemplate', (event) => {
     const eventDetail = (event as CustomEvent).detail;
-    resetDocument(eventDetail.json);
+
+    // Decode base64 string to JSON
+    const json = JSON.parse(atob(eventDetail.json));
+    resetDocument(json);
+    
   });
 
   return (
