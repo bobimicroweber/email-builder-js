@@ -31,12 +31,10 @@
   "directories": {
     "test": "tests"
   },
-  "author": "",
   "dependencies": {
     "js-tokens": "^4.0.0",
     "loose-envify": "^1.4.0",
     "react": "^18.2.0",
     "zod": "^3.22.4"
-  },
-  "devDependencies": {}
+  }
 }
