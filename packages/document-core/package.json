@@ -1,6 +1,6 @@
 {
   "name": "@microweber-email-builder/document-core",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Tools to render waypoint-style documents (core package)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -19,7 +19,7 @@
     "build": "npx tsc",
     "publish": "npm init --scope=@microweber-email-builder && npm publish --access public"
   },
-   "authors": [
+  "authors": [
     "carlos@usewaypoint.com",
     "selfworksbg@gmail.com"
   ],
@@ -27,5 +27,16 @@
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
     "zod": "^1 || ^2 || ^3"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "dependencies": {
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "react": "^18.2.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {}
 }
