@@ -1,6 +1,6 @@
 {
   "name": "@microweber-email-builder/email-builder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component to render email messages",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -29,6 +29,11 @@
     "react-dom": "^16 || ^17 || ^18",
     "zod": "^1 || ^2 || ^3"
   },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/mocha": "^10.0.7",
+    "@types/react-dom": "^18.3.0"
+  },
   "dependencies": {
     "@microweber-email-builder/block-avatar": "^0.0.5",
     "@microweber-email-builder/block-button": "^0.0.4",
@@ -42,5 +47,6 @@
     "@microweber-email-builder/block-spacer": "^0.0.4",
     "@microweber-email-builder/block-text": "^0.0.7",
     "@microweber-email-builder/document-core": "^0.1.0"
-  }
+  },
+  "author": ""
 }
