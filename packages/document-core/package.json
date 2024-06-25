@@ -1,6 +1,6 @@
 {
   "name": "@microweber-email-builder/document-core",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Tools to render waypoint-style documents (core package)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,5 +36,7 @@
     "loose-envify": "^1.4.0",
     "react": "^18.2.0",
     "zod": "^3.22.4"
-  }
+  },
+  "devDependencies": {},
+  "author": ""
 }

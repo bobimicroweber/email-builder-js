@@ -1,6 +1,6 @@
 {
   "name": "@microweber-email-builder/email-builder",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "React component to render email messages",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -41,6 +41,6 @@
     "@microweber-email-builder/block-menu": "^0.0.5",
     "@microweber-email-builder/block-spacer": "^0.0.4",
     "@microweber-email-builder/block-text": "^0.0.7",
-    "@microweber-email-builder/document-core": "^0.0.9"
+    "@microweber-email-builder/document-core": "^0.1.0"
   }
 }
