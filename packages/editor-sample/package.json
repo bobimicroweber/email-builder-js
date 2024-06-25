@@ -21,7 +21,7 @@
     "@microweber-email-builder/block-spacer": "^0.0.4",
     "@microweber-email-builder/block-text": "^0.0.7",
     "@microweber-email-builder/document-core": "^0.0.7",
-    "@microweber-email-builder/email-builder": "^0.1.0",
+    "@microweber-email-builder/email-builder": "^0.1.1",
     "@mui/icons-material": "^5.15.10",
     "@mui/material": "^5.15.10",
     "highlight.js": "^11.9.0",
