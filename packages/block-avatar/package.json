@@ -1,7 +1,7 @@
 {
-  "name": "@usewaypoint/block-avatar",
+  "name": "@microweber-email-builder/block-avatar",
   "version": "0.0.3",
-  "description": "@usewaypoint/document compatible Avatar component",
+  "description": "@microweber-email-builder/document compatible Avatar component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -16,9 +16,13 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public"
   },
-  "author": "carlos@usewaypoint.com",
+   "authors": [
+    "carlos@usewaypoint.com",
+    "selfworksbg@gmail.com"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",

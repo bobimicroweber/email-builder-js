@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import { ArrowBack, MonitorOutlined, PhoneIphoneOutlined } from '@mui/icons-material';
 import { Box, Button, Stack, SxProps, ToggleButton, ToggleButtonGroup, Tooltip } from '@mui/material';
-import { Reader } from '@usewaypoint/email-builder';
+import { Reader } from '@microweber/email-builder';
 
 import EditorBlock from '../../documents/editor/EditorBlock';
 import {

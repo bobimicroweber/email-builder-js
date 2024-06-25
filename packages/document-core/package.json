@@ -18,7 +18,10 @@
   "scripts": {
     "build": "npx tsc"
   },
-  "author": "carlos@usewaypoint.com",
+   "authors": [
+    "carlos@usewaypoint.com",
+    "selfworksbg@gmail.com"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
