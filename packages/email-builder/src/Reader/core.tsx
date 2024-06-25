@@ -1,21 +1,21 @@
 import React, { createContext, useContext } from 'react';
 import { z } from 'zod';
 
-import { Avatar, AvatarPropsSchema } from '@usewaypoint/block-avatar';
-import { Button, ButtonPropsSchema } from '@usewaypoint/block-button';
-import { Divider, DividerPropsSchema } from '@usewaypoint/block-divider';
-import { Heading, HeadingPropsSchema } from '@usewaypoint/block-heading';
-import { Html, HtmlPropsSchema } from '@usewaypoint/block-html';
-import { Image, ImagePropsSchema } from '@usewaypoint/block-image';
-import { Spacer, SpacerPropsSchema } from '@usewaypoint/block-spacer';
-import { Text, TextPropsSchema } from '@usewaypoint/block-text';
+import { Avatar, AvatarPropsSchema } from '@microweber-email-builder/block-avatar';
+import { Button, ButtonPropsSchema } from '@microweber-email-builder/block-button';
+import { Divider, DividerPropsSchema } from '@microweber-email-builder/block-divider';
+import { Heading, HeadingPropsSchema } from '@microweber-email-builder/block-heading';
+import { Html, HtmlPropsSchema } from '@microweber-email-builder/block-html';
+import { Image, ImagePropsSchema } from '@microweber-email-builder/block-image';
+import { Spacer, SpacerPropsSchema } from '@microweber-email-builder/block-spacer';
+import { Text, TextPropsSchema } from '@microweber-email-builder/block-text';
 import { Menu, MenuPropsSchema } from '../../../block-menu/src/index';
 
 import {
   buildBlockComponent,
   buildBlockConfigurationDictionary,
   buildBlockConfigurationSchema,
-} from '@usewaypoint/document-core';
+} from '@microweber-email-builder/document-core';
 
 import ColumnsContainerPropsSchema from '../blocks/ColumnsContainer/ColumnsContainerPropsSchema';
 import ColumnsContainerReader from '../blocks/ColumnsContainer/ColumnsContainerReader';

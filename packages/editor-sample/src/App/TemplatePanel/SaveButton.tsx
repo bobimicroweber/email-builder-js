@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import { Save } from '@mui/icons-material';
 import { Button } from '@mui/material';
-import { renderToStaticMarkup } from '@usewaypoint/email-builder';
+import { renderToStaticMarkup } from '@microweber-email-builder/email-builder';
 
 import { useDocument } from '../../documents/editor/EditorContext';
 

@@ -1,7 +1,7 @@
 {
-  "name": "@usewaypoint/block-heading",
+  "name": "@microweber-email-builder/block-heading",
   "version": "0.0.3",
-  "description": "@usewaypoint/document compatible Heading component",
+  "description": "@microweber-email-builder/document compatible Heading component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

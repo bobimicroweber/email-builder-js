@@ -1,7 +1,7 @@
 {
-  "name": "@usewaypoint/block-container",
+  "name": "@microweber-email-builder/block-container",
   "version": "0.0.2",
-  "description": "@usewaypoint/document compatible Container component",
+  "description": "@microweber-email-builder/document compatible Container component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -16,9 +16,10 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm init --scope=@microweber-email-builder && npm publish --access public"
   },
-   "authors": [
+  "authors": [
     "carlos@usewaypoint.com",
     "selfworksbg@gmail.com"
   ],
@@ -29,5 +30,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^14.2.1"
-  }
+  },
+  "author": ""
 }

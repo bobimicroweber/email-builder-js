@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { HtmlProps, HtmlPropsSchema } from '@usewaypoint/block-html';
+import { HtmlProps, HtmlPropsSchema } from '@microweber-email-builder/block-html';
 
 import BaseSidebarPanel from './helpers/BaseSidebarPanel';
 import TextInput from './helpers/inputs/TextInput';

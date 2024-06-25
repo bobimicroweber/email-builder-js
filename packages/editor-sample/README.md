@@ -1,4 +1,4 @@
-# @usewaypoint/editor-sample
+# @microweber-email-builder/editor-sample
 
 Use this as a sample to self-host EmailBuilder.js.
 

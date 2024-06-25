@@ -1,3 +1,3 @@
-# @usewaypoint/block-container
+# @microweber-email-builder/block-container
 
 Container component for use with the EmailBuilder package.

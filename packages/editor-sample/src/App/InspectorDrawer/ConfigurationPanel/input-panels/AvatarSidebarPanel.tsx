@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { AspectRatioOutlined } from '@mui/icons-material';
 import { ToggleButton } from '@mui/material';
-import { AvatarProps, AvatarPropsDefaults, AvatarPropsSchema } from '@usewaypoint/block-avatar';
+import { AvatarProps, AvatarPropsDefaults, AvatarPropsSchema } from '@microweber-email-builder/block-avatar';
 
 import BaseSidebarPanel from './helpers/BaseSidebarPanel';
 import RadioGroupInput from './helpers/inputs/RadioGroupInput';

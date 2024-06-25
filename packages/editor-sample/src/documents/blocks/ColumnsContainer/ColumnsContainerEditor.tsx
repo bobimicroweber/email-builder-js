@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ColumnsContainer as BaseColumnsContainer } from '@usewaypoint/block-columns-container';
+import { ColumnsContainer as BaseColumnsContainer } from '@microweber-email-builder/block-columns-container';
 
 import { useCurrentBlockId } from '../../editor/EditorBlock';
 import { setDocument, setSelectedBlockId } from '../../editor/EditorContext';

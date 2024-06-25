@@ -7,7 +7,7 @@ import {
   VerticalAlignTopOutlined,
 } from '@mui/icons-material';
 import { Button, Stack, ToggleButton } from '@mui/material';
-import { ImageProps, ImagePropsSchema } from '@usewaypoint/block-image';
+import { ImageProps, ImagePropsSchema } from '@microweber-email-builder/block-image';
 
 import BaseSidebarPanel from './helpers/BaseSidebarPanel';
 import RadioGroupInput from './helpers/inputs/RadioGroupInput';
