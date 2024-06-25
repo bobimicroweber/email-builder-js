@@ -1,6 +1,6 @@
 {
   "name": "@microweber-email-builder/block-avatar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "@microweber-email-builder/document compatible Avatar component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

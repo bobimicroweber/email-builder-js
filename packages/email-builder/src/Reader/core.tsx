@@ -9,7 +9,7 @@ import { Html, HtmlPropsSchema } from '@microweber-email-builder/block-html';
 import { Image, ImagePropsSchema } from '@microweber-email-builder/block-image';
 import { Spacer, SpacerPropsSchema } from '@microweber-email-builder/block-spacer';
 import { Text, TextPropsSchema } from '@microweber-email-builder/block-text';
-import { Menu, MenuPropsSchema } from '../../../block-menu/src/index';
+import { Menu, MenuPropsSchema } from '@microweber-email-builder/block-menu';
 
 import {
   buildBlockComponent,

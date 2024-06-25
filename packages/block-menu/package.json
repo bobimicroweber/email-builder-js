@@ -1,6 +1,6 @@
 {
   "name": "@microweber-email-builder/block-menu",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "@microweber-email-builder/document compatible Divider component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
     "publish": "npm init --scope=@microweber-email-builder && npm publish --access public"
   },
   "authors": [
