@@ -27,7 +27,7 @@ export default function SaveButton() {
   };
 
   return (
-      <Button variant="outlined" onClick={onClick} startIcon={<Save />}>
+      <Button variant="contained" onClick={onClick} startIcon={<Save />}>
         <span>Save</span>
       </Button>
   );

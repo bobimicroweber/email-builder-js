@@ -112,13 +112,14 @@ export default function TemplatePanel() {
           <Stack direction="row" gap={2} width="40%" >
 
            <BackToButton />
-           <SaveButton />
+
 
           </Stack>
 
-          <Stack direction="row" spacing={2}>
+        {/*  <Stack direction="row" spacing={2}>
             <MainTabsGroup />
-          </Stack>
+          </Stack>*/}
+
           <Stack direction="row" spacing={2}>
             <DownloadJson />
             <ImportJson />
@@ -136,8 +137,13 @@ export default function TemplatePanel() {
             </ToggleButtonGroup>
 
           </Stack>
+
         </Stack>
+
+        <Stack direction="row" spacing={2}>
+        <SaveButton />
         <ToggleInspectorPanelButton />
+       </Stack>
       </Stack>
       <Box sx={{ height: 'calc(100vh - 49px)', overflow: 'auto', minWidth: 370 }}>{renderMainPanel()}</Box>
     </>

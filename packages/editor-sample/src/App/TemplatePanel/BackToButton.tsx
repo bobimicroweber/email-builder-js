@@ -13,7 +13,7 @@ export default function BackToButton() {
           window.dispatchEvent(event);
         }}
         variant="outlined">
-        <ArrowBack /> <span>&nbsp; Back to Newsletter</span>
+        <ArrowBack /> <span>&nbsp; Back</span>
       </Button>
     </>
   );
