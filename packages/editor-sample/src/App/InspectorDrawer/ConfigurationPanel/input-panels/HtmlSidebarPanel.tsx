@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Link } from '@mui/material';
 import { HtmlProps, HtmlPropsSchema } from '@usewaypoint/block-html';
 
 import BaseSidebarPanel from './helpers/BaseSidebarPanel';
@@ -25,6 +26,15 @@ export default function HtmlSidebarPanel({ data, setData }: HtmlSidebarPanelProp
 
   return (
     <BaseSidebarPanel title="Html block">
+      <div>
+        Available variables: <br />
+        &#123;&#123; name &#125;&#125;
+        &#123;&#123; first_name &#125;&#125;
+        &#123;&#123; last_name &#125;&#125;
+        &#123;&#123; email &#125;&#125;
+        &#123;&#123; site_url &#125;&#125;
+        &#123;&#123; unsubscribe &#125;&#125;
+      </div>
       <TextInput
         label="Content"
         rows={5}
