@@ -7,6 +7,7 @@ import BaseSidebarPanel from './helpers/BaseSidebarPanel';
 import RadioGroupInput from './helpers/inputs/RadioGroupInput';
 import TextInput from './helpers/inputs/TextInput';
 import MultiStylePropertyPanel from './helpers/style-inputs/MultiStylePropertyPanel';
+import AvailableUserVariables from './AvailableUserVariables';
 
 type HeadingSidebarPanelProps = {
   data: HeadingProps;
@@ -27,6 +28,7 @@ export default function HeadingSidebarPanel({ data, setData }: HeadingSidebarPan
 
   return (
     <BaseSidebarPanel title="Heading block">
+      <AvailableUserVariables />
       <TextInput
         label="Content"
         rows={3}

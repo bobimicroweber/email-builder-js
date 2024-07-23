@@ -6,6 +6,7 @@ import BaseSidebarPanel from './helpers/BaseSidebarPanel';
 import BooleanInput from './helpers/inputs/BooleanInput';
 import TextInput from './helpers/inputs/TextInput';
 import MultiStylePropertyPanel from './helpers/style-inputs/MultiStylePropertyPanel';
+import AvailableUserVariables from './AvailableUserVariables';
 
 type TextSidebarPanelProps = {
   data: TextProps;
@@ -26,6 +27,7 @@ export default function TextSidebarPanel({ data, setData }: TextSidebarPanelProp
 
   return (
     <BaseSidebarPanel title="Text block">
+      <AvailableUserVariables />
       <TextInput
         label="Content"
         rows={5}
